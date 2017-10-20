@@ -1,0 +1,8 @@
+@function strip-units($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@function toem($pixels, $font: 16px) {
+  $newval: $pixels / $font;
+  @return #{strip-units($newval)}em
+}
