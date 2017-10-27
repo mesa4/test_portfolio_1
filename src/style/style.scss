@@ -21,11 +21,10 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 1em;
 	font: inherit;
 	vertical-align: baseline;
-	font-family: 'AgorasReg', serif;
-	letter-spacing: 0.03em;
+	font-family: 'Geometria', sans-serif;
+	box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -70,44 +69,166 @@ body {
 
 }
 .header {
+	background: #000 url(images/header-bg.jpg) center center no-repeat;
+	background-size: cover;
+	position: relative;
+	&__triangle{
+		&-left {
+			width: 37.8%;
+			height: 100%;
+			position: absolute;
+			bottom: 0;
+			right: 62.2%;
 
-	&__main {
+			&:before {
+				content: '';
+				width: 2000%;
+				height: 100%;
+				background: #fff;
+				opacity: 0.7;
+				position: absolute;
+				transform-origin: top right;
+				transform: skew(32deg);
+				top: 0;
+				right: 0;
+			}
+		}
+		&-right {
+			width: 62.2%;
+			height: 10000px;
+			position: absolute;
+			top: 0;
+			left: 37.8%;
+			z-index: 1;
 
+			&:before {
+				content: '';
+				width: 2000%;
+				height: 100%;
+				background: #213ec1;
+				opacity: 0.7;
+				position: absolute;
+				transform-origin: top left;
+				transform: skew(32deg);
+				top: 0;
+				left: 0;
+			}
+		}
+	}
 
+	&__top {
+		position: relative;
+		border-bottom: 1px solid #d7d7d7;
 		&__container {
 			max-width: 1200px;
+			position: relative;
 			margin: 0 auto;
 			display: flex;
 			align-items: center;
 			width: 100%;
 			min-height: 100px;
-
-			&__logo {
-				padding: 0 12px;
-				width: 16.666%;
-
+			z-index: 2;
+			&__left {
+				width: 40%;
 				&--image {
 					width: 144px;
 					height: 44px;
-					display: block;
+					display: flex;
+					align-items: center;
+					justify-content: flex-start;
+				}
+				svg {
+					fill: #ff0;
+				}
+			}
+			&__right {
+				position: relative;
+				padding: 0 14px;
+				width: 60%;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				&__phone {
+					width: 70%;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					position: relative;
+					&--item {
+						margin-left: auto;
+						margin-right: auto;
+						a {
+							$f: 24px;
+							font-size: toem($f);
+							color: #fff;
+							text-decoration: none;
+							font-weight: bold;
+							display: block;
+							letter-spacing: 2px;
+							span {
+								margin-right: 6px;
+								font-weight: normal;
+							}
+						}
+					}
 
-					svg {
-						fill: #ff0;
+				}
+				&__call-back {
+					a {
+						$f: 20px;
+						font-size: toem($f);
+						color: #fff;
+						text-decoration: underline;
+						font-weight: bold;
+						display: block;
 					}
 				}
 			}
-			&__phone {
-				padding: 0 12px;
-				width: 66.666%;
+		}
+	}
+	&__bottom {
+		margin: 70px 0 0 0;
+		&__container {
+			max-width: 1200px;
+			position: relative;
+			margin: 0 auto;
+			display: flex;
+			align-items: flex-start;
+			justify-content: flex-start;
+			width: 100%;
+			z-index: 2;
+			padding: 0 14px;
+			&__left {
+				width: 50%;
 				display: flex;
-				align-items: center;
-				justify-content: flex-end;
-				&__wrap {
-					max-width: 500px;
-
+				align-items: flex-start;
+				justify-content: flex-start;
+				flex-direction: column;
+				flex-wrap: wrap;
+				h1 {
+					$f: 72px;
+					font-size: toem($f);
+					margin: 0;
+					padding: 0;
+					color: #213ec1;
+					text-transform: uppercase;
+					font-weight: bolder;
+					line-height: 1.2;
+					letter-spacing: 4px;
+				}
+				p {
+					$f: 30px;
+					font-size: toem($f);
+					margin: 0;
+					padding: 0;
 				}
 			}
+			&__right {
+
+			}
 		}
+
 	}
 }
 .articles {
@@ -119,7 +240,6 @@ body {
 			align-items: center;
 			justify-content: center;
 			font-size: toem($f);
-			margin: 0 0 toem(18, $f) 0;
 			padding: 0.04em 0 0 0;
 		}
 	}

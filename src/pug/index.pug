@@ -8,20 +8,32 @@ html(lang='en')
 		title Document
 	body
 		header.header
-			.header__main
-				.header__main__container
-					.header__main__container__left
-						a.header__main__container__logo--image.svg
+			.header__triangle-left
+			.header__triangle-right
+			.header__top
+				.header__top__container
+					.header__top__container__left
+						a(href="").header__top__container__left--image.svg
 							svg: use(xlink:href="images/sprite.svg#logo")
-					.header__main__container__right
-						.header__main__container__right__phone
+					.header__top__container__right
+						.header__top__container__right__phone
+							.header__top__container__right__phone--item
+								a(href="")
+									span (044)
+									| 345-23-23
+							.header__top__container__right__phone--item
+								a(href="")
+									span (050)
+									| 925-55-22
+						.header__top__container__right__call-back
 							a(href="")
-								span (044)
-								| 345-23-23
-						.header__main__container__right--item
-							a(href="")
-								span (044)
-								| 345-23-23
+								span заказать звонок
+			.header__bottom
+				.header__bottom__container
+					.header__bottom__container__left
+						h1 работа <br> в израиле
+						p Гарантия оплаты труда <br> Уже трудоустроили <br> более 200 человек
+					.header__bottom__container__right
 
 
 

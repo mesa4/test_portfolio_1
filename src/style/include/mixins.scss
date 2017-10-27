@@ -2,7 +2,7 @@
   @return $value / ($value * 0 + 1);
 }
 
-@function toem($pixels, $font: 16px) {
+@function toem($pixels, $font: 10px) {
   $newval: $pixels / $font;
   @return #{strip-units($newval)}em
 }
