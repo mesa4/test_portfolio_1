@@ -6,3 +6,30 @@
   $newval: $pixels / $font;
   @return #{strip-units($newval)}em
 }
+
+@mixin media($media) {
+  @media only screen and (min-width: $media) {
+    @content;
+  }
+}
+
+@mixin vwlp($selector, $pixels) {
+  $important_i: str-index($selector, '!');
+  $important: '';
+  @if $important_i {
+    $selector: str-slice($selector, 1, $important_i - 1);
+    $important: '!important';
+  }
+
+  #{$selector} : $pixels * 1px #{$important};
+
+
+
+
+  @media (max-width: 992px) {
+    $fake_pixel: $pixels * 992 / 1200;
+    #{$selector} : strip-units($fake_pixel) * 1px #{$important};
+  }
+
+}
+

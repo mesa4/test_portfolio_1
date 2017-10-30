@@ -7,11 +7,12 @@ html(lang='en')
 		link(rel='stylesheet', href='style.css')
 		title Document
 	body
+		// Header
 		header.header
 			.header__triangle-left
 			.header__triangle-right
 			.header__top
-				.header__top__container
+				.wrapper.header__top__container
 					.header__top__container__left
 						a(href="").header__top__container__left--image.svg
 							svg: use(xlink:href="images/sprite.svg#logo")
@@ -29,11 +30,54 @@ html(lang='en')
 							a(href="")
 								span заказать звонок
 			.header__bottom
-				.header__bottom__container
+				.wrapper.header__bottom__container
 					.header__bottom__container__left
-						h1 работа <br> в израиле
+						h1 работа <br> в ереване
 						p Гарантия оплаты труда <br> Уже трудоустроили <br> более 200 человек
+						.header__bottom__container__left__consult
+							a(href="#").header__bottom__container__left__consult--left
+								span получить консультацию
+							.header__bottom__container__left__consult--right
+								span или
+								.svg
+									svg: use(xlink:href="images/sprite.svg#header-arrow")
+							a(href="#").header__bottom__container__left__consult--send-cv отправить своё резюме
 					.header__bottom__container__right
+						ul.header__bottom__container__right__about
+							li.header__bottom__container__right__about__item.item-1
+								.header__bottom__container__right__about__item--left 37 надежных <br> работодателей
+									span
+								.header__bottom__container__right__about__item--right.active УеЗЖАЯ ОТ НАС <br> ВЫ ГАРАНТИРОВАНО <br> ЗАРАБАТЫВАЕТЕ
+
+							li.header__bottom__container__right__about__item.item-2
+								.header__bottom__container__right__about__item--left Открыто <br> 43 вакансий
+									span обновление каждую <br> неделю
+								.header__bottom__container__right__about__item--right УеЗЖАЯ ОТ НАС <br> ВЫ ГАРАНТИРОВАНО <br> ЗАРАБАТЫВАЕТЕ
+
+							li.header__bottom__container__right__about__item.item-3
+								.header__bottom__container__right__about__item--left Зароботная <br> плата $1200-2000
+									span Мы называем только <br> реальные зарплаты
+								.header__bottom__container__right__about__item--right УеЗЖАЯ ОТ НАС <br> ВЫ ГАРАНТИРОВАНО <br> ЗАРАБАТЫВАЕТЕ
+
+							li.header__bottom__container__right__about__item.item-4
+								.header__bottom__container__right__about__item--left Комфортные условия <br> проживания
+									span (бесплатно или за <br> доступную цену)
+								.header__bottom__container__right__about__item--right УеЗЖАЯ ОТ НАС <br> ВЫ ГАРАНТИРОВАНО <br> ЗАРАБАТЫВАЕТЕ
+		// Section
+		.section.professions
+			.wrapper
+				h2 Работа есть всегда <br>
+					span для многих профессий
+				p.professions__enumeration В таких городах:
+					span
+
+				- var values = {0:['сиделка', '300.00'], 1:['няня', '301.00'], 2:['уборщица','302.00'], 3:['работник на ферму','303.00'],	4:['штукатур','300.00'], 5:['маляр','305.00'], 6:['каменщик','306.00'],	 7:['помощник столяра','307.00']};
+
+				ul#professions-list
+					each val in values
+						li(data-cost=val[1])= val[0]
+
+
 
 
 
@@ -42,4 +86,4 @@ html(lang='en')
 
 		script(src='js/jquery-3.2.1.min.js', type='text/javascript')
 		script(src='js/svg4everybody.js', type='text/javascript')
-		script(src='js/main.js', type='text/javascript')
+		script(src='js/script.js', type='text/javascript')

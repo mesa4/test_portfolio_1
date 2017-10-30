@@ -1,10 +1,48 @@
 @import "../../src/style/include/mixins.scss";
+//@font-face {
+//	font-family: 'Geometria';
+//	src: url('../fonts/Geometria.otf');
+//	font-weight: normal;
+//	font-style: normal;
+//}
 @font-face {
-	font-family: 'Geometria';
-	src: url('../fonts/Geometria.otf');
-	font-weight: normal;
+	font-family: "Geometria";
+	src: url('../fonts/heavy/geometria-heavy-webfont.eot');
+	src: url('../fonts/heavy/geometria-heavy-webfont.ttf'),
+	url('../fonts/heavy/geometria-heavy-webfont.woff') format('woff'),
+	url('../fonts/heavy/geometria-heavy-webfont.woff2') format('woff2');
+	font-weight: 900;
 	font-style: normal;
 }
+@font-face {
+	font-family: "Geometria";
+	src: url('../fonts/bold/geometria-bold-webfont.ttf'),
+	url('../fonts/bold/geometria-bold-webfont.woff') format('woff'),
+	url('../fonts/bold/geometria-bold-webfont.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+}
+
+//@font-face {
+//	font-family: "Geometria";
+//	src: url('fonts/Opes_Sans_Hebrew_Fixed/opensanshebrew-bold-webfont.eot');
+//	src: url('fonts/Opes_Sans_Hebrew_Fixed/opensanshebrew-bold-webfont.eot?#iefix') format('embedded-opentype'),
+//	url('fonts/Opes_Sans_Hebrew_Fixed/opensanshebrew-bold-webfont.woff') format('woff'),
+//	url('fonts/Opes_Sans_Hebrew_Fixed/opensanshebrew-bold-webfont.ttf') format('truetype'),
+//	url('fonts/Opes_Sans_Hebrew_Fixed/opensanshebrew-bold-webfont.svg#beehive') format('svg');
+//	font-weight: normal;
+//	font-style: normal;
+//}
+//@font-face {
+//	font-family: "Geometria";
+//	src: url('fonts/Opes_Sans_Hebrew_Fixed/opensanshebrew-light-webfont.eot');
+//	src: url('fonts/Opes_Sans_Hebrew_Fixed/opensanshebrew-light-webfont.eot?#iefix') format('embedded-opentype'),
+//	url('fonts/Opes_Sans_Hebrew_Fixed/opensanshebrew-light-webfont.woff') format('woff'),
+//	url('fonts/Opes_Sans_Hebrew_Fixed/opensanshebrew-light-webfont.ttf') format('truetype'),
+//	url('fonts/Opes_Sans_Hebrew_Fixed/opensanshebrew-light-webfont.svg#beehive') format('svg');
+//	font-weight: normal;
+//	font-style: normal;
+//}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -59,17 +97,19 @@ img {
 body {
 	font-size: 10px;
 	font-family: 'Geometria', sans-serif;
-	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: visible;
 }
 .svg svg {
 	width: 100%;
 	height:100%;
 }
-.container {
 
+.wrapper {
+	max-width: 1200px;
 }
 .header {
-	background: #000 url(images/header-bg.jpg) center center no-repeat;
+	background: #000 url(images/header-bg3.jpg) center center no-repeat;
 	background-size: cover;
 	position: relative;
 	&__triangle{
@@ -85,7 +125,7 @@ body {
 				width: 2000%;
 				height: 100%;
 				background: #fff;
-				opacity: 0.7;
+				opacity: 0.6;
 				position: absolute;
 				transform-origin: top right;
 				transform: skew(32deg);
@@ -105,8 +145,8 @@ body {
 				content: '';
 				width: 2000%;
 				height: 100%;
-				background: #213ec1;
-				opacity: 0.7;
+				background: #202e79;
+				opacity: 0.9;
 				position: absolute;
 				transform-origin: top left;
 				transform: skew(32deg);
@@ -118,21 +158,20 @@ body {
 
 	&__top {
 		position: relative;
-		border-bottom: 1px solid #d7d7d7;
+		border-bottom: toem(1px) solid #d7d7d7;
 		&__container {
-			max-width: 1200px;
 			position: relative;
 			margin: 0 auto;
 			display: flex;
 			align-items: center;
 			width: 100%;
-			min-height: 100px;
+			min-height: toem(100px);
 			z-index: 2;
 			&__left {
 				width: 40%;
 				&--image {
-					width: 144px;
-					height: 44px;
+					width: toem(144px);
+					height: toem(44px);
 					display: flex;
 					align-items: center;
 					justify-content: flex-start;
@@ -143,7 +182,7 @@ body {
 			}
 			&__right {
 				position: relative;
-				padding: 0 14px;
+				padding: 0 toem(14px);
 				width: 60%;
 				display: flex;
 				align-items: center;
@@ -159,20 +198,19 @@ body {
 						margin-left: auto;
 						margin-right: auto;
 						a {
-							$f: 24px;
+							$f: 22;
 							font-size: toem($f);
 							color: #fff;
 							text-decoration: none;
-							font-weight: bold;
+							font-weight: 900;
 							display: block;
-							letter-spacing: 2px;
+							letter-spacing: toem(1px);
 							span {
-								margin-right: 6px;
+								margin-right: toem(6px);
 								font-weight: normal;
 							}
 						}
 					}
-
 				}
 				&__call-back {
 					a {
@@ -188,17 +226,20 @@ body {
 		}
 	}
 	&__bottom {
-		margin: 70px 0 0 0;
+		margin: toem(70px) 0 0 0;
+		padding: 0 0 toem(240px) 0;
 		&__container {
-			max-width: 1200px;
 			position: relative;
 			margin: 0 auto;
 			display: flex;
-			align-items: flex-start;
+			align-items: stretch;
 			justify-content: flex-start;
 			width: 100%;
 			z-index: 2;
-			padding: 0 14px;
+			padding: 0 toem(14px);
+			//****************************************
+			// Header Bottom Left side --- START ---
+			//****************************************
 			&__left {
 				width: 50%;
 				display: flex;
@@ -211,36 +252,227 @@ body {
 					font-size: toem($f);
 					margin: 0;
 					padding: 0;
-					color: #213ec1;
+					color: #202e79;
 					text-transform: uppercase;
-					font-weight: bolder;
+					font-weight: 900;
 					line-height: 1.2;
-					letter-spacing: 4px;
 				}
 				p {
 					$f: 30px;
 					font-size: toem($f);
-					margin: 0;
 					padding: 0;
+					margin: toem(66,$f) 0 0 0;
+					letter-spacing: toem(1,$f);
+					line-height: toem(34,$f);
+				}
+				&__consult {
+					$f: 16px;
+					margin: toem(120px) 0 0 0;
+					position: relative;
+					display: flex;
+					align-items: stretch;
+					justify-content: space-between;
+					height: toem(80px);
+					&--left {
+						font-size: toem($f);
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width: toem(300, $f);
+						//height: toem(80px);
+						border-radius: toem(40, $f) 0 0 toem(40, $f);
+						background: #3eaa8a;
+						color: #fff;
+						font-weight: 700;
+						text-transform: uppercase;
+						text-decoration: none;
+						z-index: 5;
+					}
+					&--right {
+						width: toem(100, $f);
+						//height: toem(80px);
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						border-radius: 0 toem(40, $f) toem(40, $f) 0;
+						background: #2f997a;
+						cursor: pointer;
+						font-size: toem($f);
+						color: #fff;
+						font-weight: 700;
+						text-transform: uppercase;
+						z-index: 5;
+						.svg {
+							margin: 0 0 0 toem(7, $f);
+							width: toem(14, $f);
+							height: toem(8, $f);
+							fill: none;
+							stroke: #fff;
+							stroke-width: toem(3, $f);
+							fill-rule: evenodd;
+						}
+					}
+					&--send-cv {
+
+						position: absolute;
+						top: toem(44, $f);
+						left: 0;
+						width: 100%;
+						height: toem(120, $f);
+						display: none;
+						text-align: center;
+						padding: toem(70, $f) 0 0 0;
+						border-radius: 0 0 toem(40, $f) toem(40, $f);
+						background: #2f997a;
+						cursor: pointer;
+						font-size: toem($f);
+						color: #fff;
+						font-weight: 700;
+						text-transform: uppercase;
+						text-decoration: none;
+						z-index: 2;
+					}
 				}
 			}
+			//****************************************
+			// Header Bottom Left side --- END ---
+			//****************************************
+
+			//****************************************
+			// Header Bottom Right side --- START ---
+			//****************************************
 			&__right {
+				width: 50%;
+				padding: 0 toem(15px);
+				display: flex;
+				align-items: stretch;
+				justify-content: flex-start;
+				&__about{
+					width: 100%;
+					display: flex;
+					align-items: flex-start;
+					justify-content: space-between;
+					flex-direction: column;
+					&__item{
+						display: flex;
+						align-items: center;
+						justify-content: flex-start;
+						&--left{
+							$f: 20px;
+							font-size: toem($f);
+							color: #fff;
+							font-weight: 700;
+							text-transform: uppercase;
+							display: flex;
+							align-items: flex-start;
+							justify-content: flex-start;
+							flex-direction: column;
+							cursor: pointer;
+							span {
+								$ff: 14px;
+								font-size: toem($ff,$f);
+								color: #fff;
+								opacity: 0.9;
+								font-weight: normal;
+								text-transform: none;
+							}
+						}
+						&--right {
+							$f: 16px;
+							&:before {
+								content: ' ';
+								border: toem(14,$f) solid transparent;
+								border-right: toem(14,$f) solid #fff;
+								left: toem(-28,$f);
+								top: 50%;
+								transform: translateY(-50%);
+								position: absolute;
+								display: block;
+							}
+							font-size: toem($f);
+							font-weight: 700;
+							text-transform: uppercase;
+							padding: toem(16,$f) toem(25,$f);
+							color: #202e79;
+							background: #fff;
+							border-radius: toem(4,$f);
+							margin: 0 0 0 toem(34,$f);
+							//position: absolute;
+							position: relative;
+							opacity: 0;
+							transition: 0.2s;
+							//min-width: toem(234,$f);
+						}
+						&--right.active {
+							opacity: 1;
+						}
+					}
+					&__item.item-1 {
+						padding: 0 0 0 0;
+						opacity: 1;
+					}
+					&__item.item-2 {
+						padding: 0 0 0 toem(85px);
+					}
+					&__item.item-3 {
+						padding: 0 0 0 toem(200px);
+					}
+					&__item.item-4 {
+						padding: 0 0 0 toem(285px);
+					}
+				}
+			}
+			//****************************************
+			// Header Bottom Right side --- END ---
+			//****************************************
+		}
+
+	}
+}
+
+.section {
+	.wrapper {
+		position: relative;
+		margin: 0 auto;
+		width: 100%;
+		z-index: 2;
+		padding: 0 toem(14px);
+		h2 {
+			$f: 60px;
+			margin: toem(85,$f) 0 0 0;
+			font-size: toem(60);
+			font-weight: normal;
+			span {
+				font-weight: 900;
+			}
+		}
+	}
+}
+
+.professions {
+	.wrapper {
+		h2 {
+			span {
 
 			}
 		}
+		p {
+			$f: 30px;
+			margin: toem(40,$f) 0 0 0;
+			font-size: toem(30);
+			font-weight: normal;
+			max-width: 60%;
+		}
+		ul {
 
-	}
-}
-.articles {
-	header {
-		h2 {
-			$f: 40;
-			display: flex;
-			width: 100%;
-			align-items: center;
-			justify-content: center;
-			font-size: toem($f);
-			padding: 0.04em 0 0 0;
 		}
 	}
 }
+
+
+
+//@media (min-width: 1200px) {
+//	body {
+//		@include vwlp('padding-top', 200);
+//	}
+//}
