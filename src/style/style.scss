@@ -446,6 +446,69 @@ body {
 				font-weight: 900;
 			}
 		}
+		.consult {
+			$f: 16px;
+			position: relative;
+			display: inline-flex;
+			align-items: stretch;
+			justify-content: space-between;
+			&--left {
+				font-size: toem($f);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: toem(300, $f);
+				border-radius: toem(40, $f) 0 0 toem(40, $f);
+				background: #3eaa8a;
+				color: #fff;
+				font-weight: 700;
+				text-transform: uppercase;
+				text-decoration: none;
+				z-index: 5;
+			}
+			&--right {
+				width: toem(100, $f);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 0 toem(40, $f) toem(40, $f) 0;
+				background: #2f997a;
+				cursor: pointer;
+				font-size: toem($f);
+				color: #fff;
+				font-weight: 700;
+				text-transform: uppercase;
+				z-index: 5;
+				.svg {
+					margin: 0 0 0 toem(7, $f);
+					width: toem(14, $f);
+					height: toem(8, $f);
+					fill: none;
+					stroke: #fff;
+					stroke-width: toem(3, $f);
+					fill-rule: evenodd;
+				}
+			}
+			&--send-cv {
+				position: absolute;
+				top: toem(44, $f);
+				left: 0;
+				width: 100%;
+				height: toem(120, $f);
+				display: none;
+				text-align: center;
+				padding: toem(70, $f) 0 0 0;
+				border-radius: 0 0 toem(40, $f) toem(40, $f);
+				background: #2f997a;
+				cursor: pointer;
+				font-size: toem($f);
+				color: #fff;
+				font-weight: 700;
+				text-transform: uppercase;
+				text-decoration: none;
+				z-index: 2;
+			}
+		}
 	}
 }
 
@@ -463,8 +526,72 @@ body {
 			font-weight: normal;
 			max-width: 60%;
 		}
-		ul {
+		#professions-list {
+			max-width: 64%;
+			margin: toem(40) 0 0 0;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			justify-content: flex-start;
+			border: toem(2) solid #f3f3f3;
+			padding: toem(30)toem(20);
+			column-count: 3;
 
+			li {
+				$f: 14px;
+				font-size: toem($f);
+				font-weight: 600;
+				width: 25%;
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				flex-wrap: wrap;
+				span {
+					&:hover,&.active {
+						background: #202e79;
+						color: #fff;
+					}
+					width: 90%;
+					color: #000;
+					padding: 8px 10px;
+					margin: 0 0 4px 0;
+					border-radius: 4px;
+					cursor: pointer;
+					transition: 0.2s;
+				}
+			}
+		}
+		.professions__salary {
+			$f: 24px;
+			font-size: toem($f);
+			font-weight: 900;
+			margin: toem(62) 0 0 0;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			color: #464646;
+			&__selected--prof {
+				color: #202e79;
+				margin-right: 4px;
+				&:first-letter {
+					text-transform: uppercase;
+				}
+				//text-transform: capitalize;
+			}
+			&__selected--sal {
+				margin-left: 4px;
+			}
+		}
+		.consult {
+			$f: 16px;
+			margin: toem(10px) 0 0 0;
+			height: toem(80px);
+			&--left {
+				width: toem(386, $f);
+			}
+			&--right {
+				width: toem(116, $f);
+			}
 		}
 	}
 }

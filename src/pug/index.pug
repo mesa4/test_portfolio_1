@@ -3,7 +3,7 @@ html(lang='en')
 		meta(charset='UTF-8')
 		meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
 		meta(http-equiv='X-UA-Compatible', content='ie=edge')
-		link(rel='stylesheet', href='reset.css')
+		//link(rel='stylesheet', href='reset.css')
 		link(rel='stylesheet', href='style.css')
 		title Document
 	body
@@ -71,11 +71,34 @@ html(lang='en')
 				p.professions__enumeration В таких городах:
 					span
 
-				- var values = {0:['сиделка', '300.00'], 1:['няня', '301.00'], 2:['уборщица','302.00'], 3:['работник на ферму','303.00'],	4:['штукатур','300.00'], 5:['маляр','305.00'], 6:['каменщик','306.00'],	 7:['помощник столяра','307.00']};
+				- var values = {0:['сиделка', '300.00'], 1:['няня', '301.00'], 2:['уборщица','302.00'], 3:['работник на ферму','303.00'],	4:['штукатур','300.00'], 5:['маляр','305.00'], 6:['каменщик','306.00'], 7:['помощник столяра','307.00'], 8:['гипсокартонщик','12307.00'], 9:['разнорабочий','12307.00'], 10:['столяр','107.00'], 11:['работник на автомойку','107.00'], 12:['плиточник','133207.00'], 13:['домработница','7.50'], 14:['электромонтажник','133207.00'], 15:['работник на финишные работы','3256.00']};
 
 				ul#professions-list
 					each val in values
-						li(data-cost=val[1])= val[0]
+						li
+							span(data-cost=val[1])=val[0]
+				.professions__salary
+					span.professions__salary__selected--prof
+					| -  Зп/мес.: от $
+					span.professions__salary__selected--sal
+
+				.consult
+					a(href="#").consult--left
+						span получить консультацию
+					.consult--right
+						span или
+						.svg
+							svg: use(xlink:href="images/sprite.svg#header-arrow")
+					a(href="#").consult--send-cv отправить своё резюме
+
+				.consult
+					a(href="#").consult--left
+						span получить консультацию
+					.consult--right
+						span или
+						.svg
+							svg: use(xlink:href="images/sprite.svg#header-arrow")
+					a(href="#").consult--send-cv отправить своё резюме
 
 
 
