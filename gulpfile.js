@@ -44,10 +44,11 @@ gulp.task('css:build', function () {
 	gulp.src(path.src.style) //Выберем наш main.scss
 	//.pipe(sourcemaps.init()) //То же самое что и с js
 		.pipe(cssimport())
-		.pipe(sass()) //Скомпилируем
+		.pipe(sass().on('error', sass.logError)) //Скомпилируем
 		.pipe(prefixer('last 10 versions'))
 		//.pipe(sourcemaps.write())
 		.pipe(gulp.dest(path.build.css)); //И в build
+
 
 	gulp.src( 'src/style/vendor/*.*' )
 		.pipe( gulp.dest(path.build.css +'/vendor') )

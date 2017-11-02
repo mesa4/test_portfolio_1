@@ -44,37 +44,25 @@ $(document).ready(function() {
 	// 	}
 	// });
 
-	var swith = false;
-	function addedBodySlide( element ) {
 
+	function addedBodySlide( element, close_fn ) {
 		var element_class = element.attr('class');
-		var consult = element.closest('.consult');
+		var random_s = Math.random().toString(36).substring(7);
 
-		$('body').on('click',function(e) {
-			e.preventDefault();
-			console.log(1);
-
+		$('body').on('click.'+random_s,function(e) {
 			if ( $(e.target).is(element) || $(e.target).closest('.' + element_class).is(element) ) {
-
 				return false;
 			} else {
-				//$('body').unbind('click');
-				 if( element.closest('.js-active') ){
-					 consult.removeClass('js-active');
-					 consult.find('.consult--send-cv').slideUp(100, function(){
 
-					 });
-
-				 }
-
-
+				$('body').unbind('click.'+random_s);
+				close_fn();
 			}
 		});
 	}
 
 	$('.consult--right').on('click', function(e) {
-		e.preventDefault();
-		console.log('01');
+		e.stopPropagation();
+
 		var consult = $(this).closest('.consult');
 
 		if( consult.hasClass('js-active') ) {
@@ -83,7 +71,10 @@ $(document).ready(function() {
 		} else {
 			consult.addClass('js-active');
 			consult.find('.consult--send-cv').slideDown(100);
-			addedBodySlide( $(this) );
+			addedBodySlide( consult, function(){
+				consult.removeClass('js-active');
+				consult.find('.consult--send-cv').slideUp(100);
+			} );
 		}
 
 
