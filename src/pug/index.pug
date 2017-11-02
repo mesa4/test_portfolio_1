@@ -66,8 +66,11 @@ html(lang='en')
 		// Section
 		.section.professions
 			.wrapper
-				h2 Работа есть всегда <br>
+				h2
+					| Работа есть всегда
+					br
 					span для многих профессий
+
 				p.professions__enumeration В таких городах:
 					span
 
@@ -101,22 +104,114 @@ html(lang='en')
 						img(src="images/employee_2.png" alt="")
 					.employees__woman
 						img(src="images/employee_1.png" alt="")
-
+		// Section
 		.section.advantages
 			.wrapper
 				h2 Почему украинцы <br>
 					span выбирают Ереван?
 
+				.advantages__wrap
+					.advantages__wrap__item
+						.advantages__wrap__item--image.svg
+							svg: use(xlink:href="images/sprite.svg#adv-img-1")
+						p.advantages__wrap__item--text Возможность легализации <br> на длительный период
+
+					.advantages__wrap__item
+						.advantages__wrap__item--image.svg
+							svg: use(xlink:href="images/sprite.svg#adv-img-2")
+						p.advantages__wrap__item--text Комфортные и <br> доступные условия <br> проживания
+
+					.advantages__wrap__item
+						.advantages__wrap__item--image.svg
+							svg: use(xlink:href="images/sprite.svg#adv-img-3")
+						p.advantages__wrap__item--text Средний уровень <br> зарплаты в 15 раз <br> выше, чем в Украине
+
+					.advantages__wrap__item
+						.advantages__wrap__item--image.svg
+							svg: use(xlink:href="images/sprite.svg#adv-img-4")
+						p.advantages__wrap__item--text Возможность жить <br> и работать без знания <br> иностранных языков
+
+					.advantages__wrap__item
+						.advantages__wrap__item--image.svg
+							svg: use(xlink:href="images/sprite.svg#adv-img-5")
+						p.advantages__wrap__item--text Страна благоприятного <br> климата, туризма <br> и сыра
+
+					.advantages__wrap__item
+						.advantages__wrap__item--image.svg
+							svg: use(xlink:href="images/sprite.svg#adv-img-6")
+						p.advantages__wrap__item--text Сравнительно <br> небольшая стоимость <br> программы
+
+		// Section
+		.section.conditions
+			.wrapper
+				h2 Какие документы нужны <br>
+					span для выезда в Израиль?
+				p.conditions__text От вас требуется только наличие загранпаспорта
+
+				.conditions__wrap
+					.conditions__wrap__left
+							img(src="images/passport.png" alt="")
+
+					.conditions__wrap__right
+						.conditions__wrap__right--title В свою очередь мы предоставим:
+						.conditions__wrap__right__item
+							.conditions__wrap__right__item--image
+								img(src="images/conditions-arrow.png" alt="")
+							.conditions__wrap__right__item--text Решение всех нюансов в <br> процессе трудоустройства
+						.conditions__wrap__right__item
+							.conditions__wrap__right__item--image
+								img(src="images/conditions-arrow.png" alt="")
+							.conditions__wrap__right__item--text Официальное приглашение <br> с  израильской стороны
+						.conditions__wrap__right__item
+							.conditions__wrap__right__item--image
+								img(src="images/conditions-arrow.png" alt="")
+							.conditions__wrap__right__item--text Полная юридическая поддержк <br>а в оформлении легализации
+
 				.consult
 					a(href="#").consult--left
-						span подобрать лучшую вакансию
+						span получить консультацию
 					.consult--right
 						span или
 						.svg
 							svg: use(xlink:href="images/sprite.svg#header-arrow")
 					a(href="#").consult--send-cv отправить своё резюме
 
+		// Section
+		.section.privilege
+			.wrapper
+				h2 Мы отправляем  <br>
+					span только к проверенным <br> работодателям
+				p.privilege__text Это гарантирует успешное трудоустройство <br> и соответствие зарплаты и условий труда, <br> заявленных в вакансии
+				.privilege__wrap
+					.privilege__wrap__item
+						.privilege__wrap__item--image.svg
+							svg: use(xlink:href="images/sprite.svg#adv-img-1")
+						p.privilege__wrap__item--text Возможность легализации <br> на длительный период
 
+					.privilege__wrap__item
+						.privilege__wrap__item--image.svg
+							svg: use(xlink:href="images/sprite.svg#adv-img-2")
+						p.privilege__wrap__item--text Комфортные и <br> доступные условия <br> проживания
+
+					.privilege__wrap__item
+						.privilege__wrap__item--image.svg
+							svg: use(xlink:href="images/sprite.svg#adv-img-3")
+						p.privilege__wrap__item--text Средний уровень <br> зарплаты в 15 раз <br> выше, чем в Украине
+
+					.privilege__wrap__item
+						.privilege__wrap__item--image.svg
+							svg: use(xlink:href="images/sprite.svg#adv-img-4")
+						p.privilege__wrap__item--text Возможность жить <br> и работать без знания <br> иностранных языков
+
+					.privilege__wrap__item
+						.privilege__wrap__item--image.svg
+							svg: use(xlink:href="images/sprite.svg#adv-img-5")
+						p.privilege__wrap__item--text Страна благоприятного <br> климата, туризма <br> и сыра
+
+					.privilege__wrap__item
+						.privilege__wrap__item--image.svg
+							svg: use(xlink:href="images/sprite.svg#adv-img-6")
+						p.privilege__wrap__item--text Сравнительно <br> небольшая стоимость <br> программы
 
 
 

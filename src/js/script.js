@@ -45,7 +45,7 @@ $(document).ready(function() {
 	// });
 
 
-	function addedBodySlide( element, close_fn ) {
+	function addBodyEventCloseSlide( element, close_fn ) {
 		var element_class = element.attr('class');
 		var random_s = Math.random().toString(36).substring(7);
 
@@ -71,7 +71,7 @@ $(document).ready(function() {
 		} else {
 			consult.addClass('js-active');
 			consult.find('.consult--send-cv').slideDown(100);
-			addedBodySlide( consult, function(){
+			addBodyEventCloseSlide( consult, function(){
 				consult.removeClass('js-active');
 				consult.find('.consult--send-cv').slideUp(100);
 			} );
