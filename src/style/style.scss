@@ -117,7 +117,6 @@ body {
 	max-width: 1200px;
 	h2 {
 		$f: 60px;
-		padding: toem(85,$f) 0 0 0;
 		font-size: toem(60);
 		font-weight: normal;
 		line-height: toem(66, $f);
@@ -524,6 +523,8 @@ body {
 
 .professions {
 	h2 {
+		$f: 60px;
+		padding: toem(85,$f) 0 0 0;
 		span {
 		}
 	}
@@ -653,6 +654,7 @@ body {
 	}
 }
 .advantages {
+	padding: 0 0 toem(170) 0;
 	overflow: hidden;
 	&:before{
 		content: '';
@@ -664,9 +666,47 @@ body {
 		left: 0;
 		top: 0;
 	}
+	&__line__one {
+		position: absolute;
+		left: 82%;
+		bottom: 0;
+		height: 120%;
+		transform: rotateZ(-32deg);
+		transform-origin: bottom;
+		&--inner {
+			width: auto;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			border-right: 2px solid;
+			border-image: linear-gradient(to top,  #7e888c, #1a2638) 1 100%;
+		}
+	}
+	&__line__two {
+		position: absolute;
+		right: 0;
+		bottom: 46%;
+		height: 165%;
+		transform: rotateZ(-108deg);
+		transform-origin: bottom right;
+		&--inner {
+			content: '';
+			width: auto;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			border-right: 2px solid;
+			border-image: linear-gradient(to top,  #7e888c, #1a2638) 1 100%;
+		}
+	}
+
 	background: #000 url(images/section-adventage-bg.jpg) no-repeat center center;
 	background-size: cover;
 	h2 {
+		$f: 60px;
+		padding: toem(85,$f) 0 0 0;
 		color: #fff;
 		span {
 			color: #fff;
@@ -681,7 +721,6 @@ body {
 		justify-content: flex-start;
 		flex-wrap: wrap;
 		margin: toem(110) 0 0 0;
-		padding: 0 0 toem(240) 0;
 		&__item {
 			width: 50%;
 			display: flex;
@@ -711,12 +750,16 @@ body {
 	}
 }
 .conditions {
+	h2 {
+		$f: 60px;
+		padding: toem(132,$f) 0 0 0;
+	}
 	padding: 0 0 toem(140) 0;
 	&__text {
 		$f:20px;
 		font-size: $f;
 		font-weight: 400;
-		margin: toem(20) 0 0 0;
+		margin: toem(28) 0 0 0;
 		color: #000;
 	}
 	&__wrap {
@@ -728,7 +771,7 @@ body {
 		justify-content: flex-start;
 		flex-wrap: wrap;
 		margin: toem(86) 0 0 0;
-		padding: 0 0 toem(70) 0;
+		padding: 0 0 toem(76) 0;
 		&__left {
 			width: 50%;
 			max-width: 440px;
@@ -767,17 +810,31 @@ body {
 	}
 }
 .privilege {
+	padding: 0 0 toem(370) 0;
 	&:before{
 		content: '';
 		width: 100%;
 		height: 100%;
+		max-width: 100%;
+		max-height: toem(540);
+		background: #000 url(images/privilege-bg2.jpg) no-repeat center center;
+		background-size: cover;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
+	&:after{
+		content: '';
+		width: 100%;
+		height: 100%;
 		background: linear-gradient(180deg, #07181f, #07181f 75%, transparent);
-		opacity: 0.9;
 		position: absolute;
 		left: 0;
 		top: 0;
 	}
 	h2 {
+		$f: 60px;
+		padding: toem(90,$f) 0 0 0;
 		color: #fff;
 	}
 	&__text {
@@ -785,34 +842,39 @@ body {
 		font-size: $f;
 		font-weight: 400;
 		color: #fff;
-		margin: toem(20) 0 0 0;
+		margin: toem(18) 0 0 0;
 	}
 	&__wrap {
 		$f: 20px;
 		width: 100%;
-		max-width: toem(790);
 		display: flex;
 		align-items: flex-start;
 		justify-content: flex-start;
 		flex-wrap: wrap;
 		margin: toem(110) 0 0 0;
-		padding: 0 0 toem(240) 0;
 		&__item {
 			width: 50%;
 			display: flex;
-			align-items: flex-start;
+			align-items: center;
 			justify-content: flex-start;
-			margin: 0 0 toem(74) 0;
-			&--image {
-				fill: #fff;
-				max-width: toem(70);
-				max-height: toem(70);
+			margin: 0 0 toem(24) 0;
+			&__image {
 				width: 100%;
-				height: auto;
-				margin: 0 toem(26) 0 0;
+				max-width: 170px;
+				max-height: 160px;
 				display: flex;
-				align-items: flex-start;
-				justify-content: flex-start;
+				align-items: center;
+				justify-content: center;
+				margin: 0 toem(26) 0 0;
+				&--inner {
+					fill: #fff;
+					width: 100%;
+					max-width: toem(102);
+					height: auto;
+					display: flex;
+					align-items: flex-start;
+					justify-content: flex-start;
+				}
 			}
 			&--text {
 				font-size: $f;
@@ -822,6 +884,35 @@ body {
 				align-items: flex-start;
 				justify-content: flex-start;
 			}
+		}
+	}
+}
+.reviews {
+	padding: 0 0 toem(170) 0;
+	background: #2b334b;
+	&__line__one {
+		position: absolute;
+		left: 82%;
+		bottom: 0;
+		height: 120%;
+		transform: rotateZ(-32deg);
+		transform-origin: bottom;
+		&--inner {
+			width: auto;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			border-right: 2px solid;
+			border-image: linear-gradient(to top,  #7e888c, #1a2638) 1 100%;
+		}
+	}
+	h2 {
+		$f: 60px;
+		padding: toem(29) 0 0 0;
+		color: #fff;
+		span {
+			color: #fff;
 		}
 	}
 }
