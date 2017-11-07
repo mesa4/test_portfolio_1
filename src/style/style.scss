@@ -7,42 +7,59 @@
 //}
 @font-face {
 	font-family: "Geometria";
-	src: url('../fonts/heavy/geometria-heavy-webfont.eot');
-	src: url('../fonts/heavy/geometria-heavy-webfont.ttf'),
-	url('../fonts/heavy/geometria-heavy-webfont.woff') format('woff'),
-	url('../fonts/heavy/geometria-heavy-webfont.woff2') format('woff2');
+	src: url('fonts/heavy/geometria-heavy-webfont.eot');
+	src: url('fonts/heavy/geometria-heavy-webfont.ttf'),
+	url('fonts/heavy/geometria-heavy-webfont.woff') format('woff'),
+	url('fonts/heavy/geometria-heavy-webfont.woff2') format('woff2');
 	font-weight: 900;
 	font-style: normal;
 }
 @font-face {
 	font-family: "Geometria";
-	src: url('../fonts/bold/geometria-bold-webfont.ttf'),
-	url('../fonts/bold/geometria-bold-webfont.woff') format('woff'),
-	url('../fonts/bold/geometria-bold-webfont.woff2') format('woff2');
+	src: url('fonts/bold/geometria-bold-webfont.ttf'),
+	url('fonts/bold/geometria-bold-webfont.woff') format('woff'),
+	url('fonts/bold/geometria-bold-webfont.woff2') format('woff2');
 	font-weight: 700;
 	font-style: normal;
 }
 
-//@font-face {
-//	font-family: "Geometria";
-//	src: url('fonts/Opes_Sans_Hebrew_Fixed/opensanshebrew-bold-webfont.eot');
-//	src: url('fonts/Opes_Sans_Hebrew_Fixed/opensanshebrew-bold-webfont.eot?#iefix') format('embedded-opentype'),
-//	url('fonts/Opes_Sans_Hebrew_Fixed/opensanshebrew-bold-webfont.woff') format('woff'),
-//	url('fonts/Opes_Sans_Hebrew_Fixed/opensanshebrew-bold-webfont.ttf') format('truetype'),
-//	url('fonts/Opes_Sans_Hebrew_Fixed/opensanshebrew-bold-webfont.svg#beehive') format('svg');
-//	font-weight: normal;
-//	font-style: normal;
-//}
-//@font-face {
-//	font-family: "Geometria";
-//	src: url('fonts/Opes_Sans_Hebrew_Fixed/opensanshebrew-light-webfont.eot');
-//	src: url('fonts/Opes_Sans_Hebrew_Fixed/opensanshebrew-light-webfont.eot?#iefix') format('embedded-opentype'),
-//	url('fonts/Opes_Sans_Hebrew_Fixed/opensanshebrew-light-webfont.woff') format('woff'),
-//	url('fonts/Opes_Sans_Hebrew_Fixed/opensanshebrew-light-webfont.ttf') format('truetype'),
-//	url('fonts/Opes_Sans_Hebrew_Fixed/opensanshebrew-light-webfont.svg#beehive') format('svg');
-//	font-weight: normal;
-//	font-style: normal;
-//}
+@font-face {
+	font-family: "Geometria";
+	src: url('fonts/medium/geometria-medium-webfont.eot');
+	src: url('fonts/medium/geometria-medium-webfont.ttf'),
+	url('fonts/medium/geometria-medium-webfont.woff') format('woff'),
+	url('fonts/medium/geometria-medium-webfont.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Geometria";
+	src: url('fonts/webfont/geometria-webfont.eot');
+	src: url('fonts/webfont/geometria-webfont.ttf'),
+	url('fonts/webfont/geometria-webfont.woff') format('woff'),
+	url('fonts/webfont/geometria-webfont.woff2') format('woff2'),
+	url('fonts/webfont/geometria-webfont.svg') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Geometria";
+	src: url('fonts/light/geometria-light-webfont.eot');
+	src: url('fonts/light/geometria-light-webfont.ttf'),
+	url('fonts/light/geometria-light-webfont.woff') format('woff'),
+	url('fonts/light/geometria-light-webfont.woff2') format('woff2');
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Geometria";
+	src: url('fonts/lightItalic/geometrialightitalic-webfont.eot');
+	src: url('fonts/lightItalic/geometrialightitalic-webfont.ttf'),
+	url('fonts/lightItalic/geometrialightitalic-webfont.woff') format('woff'),
+	url('fonts/lightItalic/geometrialightitalic-webfont.svg') format('svg');
+	font-weight: 100;
+	font-style: italic;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -102,7 +119,7 @@ body {
 }
 .svg svg {
 	width: 100%;
-	height:100%;
+	height: 100%;
 }
 
 .section {
@@ -113,27 +130,26 @@ body {
 	margin: 0 auto;
 	width: 100%;
 	z-index: 2;
-	padding: 0 toem(28px);
+	//padding: 0 toem(28px);
 	max-width: 1200px;
 	h2 {
 		$f: 60px;
 		font-size: toem(60);
-		font-weight: normal;
-		line-height: toem(66, $f);
+		font-weight: 400;
+		line-height: toem(72, $f);
+		padding: 0 toem(24,$f);
 		span {
 			font-weight: 900;
 		}
 	}
 }
-
 .consult {
 	$f: 16px;
 	position: relative;
 	display: inline-flex;
 	align-items: stretch;
-	justify-content: space-between;
+	justify-content: flex-start;
 	&--left {
-		width: calc(100% - 100px);
 		font-size: toem($f);
 		display: flex;
 		align-items: center;
@@ -145,10 +161,10 @@ body {
 		text-transform: uppercase;
 		text-decoration: none;
 		z-index: 5;
-		padding: toem(36,$f);
+		padding: toem(32, $f) toem(22);
 	}
 	&--right {
-		max-width: toem(100);
+		//max-width: toem(100);
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -160,7 +176,7 @@ body {
 		font-weight: 700;
 		text-transform: uppercase;
 		z-index: 5;
-		padding: toem(36,$f) toem(24,$f);
+		padding: toem(32, $f) toem(12);
 		.svg {
 			margin: 0 0 0 toem(7, $f);
 			width: toem(14, $f);
@@ -219,7 +235,8 @@ body {
 		}
 		&-right {
 			width: 62.2%;
-			height: 10000px;
+			//height: 10000px;
+			height: 200%;
 			position: absolute;
 			top: 0;
 			left: 37.8%;
@@ -227,7 +244,7 @@ body {
 
 			&:before {
 				content: '';
-				width: 2000%;
+				width: 100%;
 				height: 100%;
 				background: #202e79;
 				opacity: 0.9;
@@ -518,26 +535,23 @@ body {
 	}
 }
 
-
-
-
 .professions {
+	padding: toem(80) 0;
 	h2 {
-		$f: 60px;
-		padding: toem(85,$f) 0 0 0;
 		span {
 		}
 	}
 	p {
 		$f: 30px;
-		margin: toem(40,$f) 0 0 0;
+		margin: toem(10) 0 0 0;
 		font-size: toem(30);
 		font-weight: normal;
 		max-width: 60%;
+		padding: 0 toem(24,$f);
 	}
 	#professions-list {
 		max-width: 59%;
-		margin: toem(90) 0 0 0;
+		margin: toem(90) 0 0 toem(28);
 		display: flex;
 		flex-wrap: wrap;
 		align-items: flex-start;
@@ -575,7 +589,7 @@ body {
 		font-size: toem($f);
 		font-weight: 900;
 		margin: toem(30) 0 0 0;
-		padding: 0 0 0 toem(22,$f);
+		padding: 0 0 0 toem(56,$f);
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
@@ -589,7 +603,6 @@ body {
 				}
 				//text-transform: capitalize;
 			}
-
 			&--sal {
 				margin-left: 4px;
 			}
@@ -597,17 +610,16 @@ body {
 
 	}
 	.consult {
-		margin: toem(50px) 0 0 0;
+		margin: toem(50) 0 0 toem(28);
 	}
 	.notation__text {
 		$f: 18px;
 		margin: toem(20px) 0 0 toem(52px);
-		padding: 0 0 toem(80) 0;
+		padding: 0 0 0 toem(28);
 		span {
 			font-size: $f;
 			font-weight: 500;
 		}
-
 	}
 	.employees {
 		width: 100%;
@@ -616,6 +628,7 @@ body {
 		left: 50%;
 		margin: 0 0 0 136px;
 		bottom: 0;
+		z-index: 2;
 		&__junior {
 			position: absolute;
 			max-width: 229px;
@@ -653,8 +666,9 @@ body {
 		}
 	}
 }
+
 .advantages {
-	padding: 0 0 toem(170) 0;
+	padding: toem(85) 0 toem(170) 0;
 	overflow: hidden;
 	&:before{
 		content: '';
@@ -705,8 +719,6 @@ body {
 	background: #000 url(images/section-adventage-bg.jpg) no-repeat center center;
 	background-size: cover;
 	h2 {
-		$f: 60px;
-		padding: toem(85,$f) 0 0 0;
 		color: #fff;
 		span {
 			color: #fff;
@@ -726,14 +738,14 @@ body {
 			display: flex;
 			align-items: flex-start;
 			justify-content: flex-start;
-			margin: 0 0 toem(74) 0;
+			padding: toem(14,$f) 0 toem(68) toem(40,$f);
 			&--image {
 				fill: #fff;
 				max-width: toem(70);
 				max-height: toem(70);
 				width: 100%;
 				height: auto;
-				margin: 0 toem(26) 0 0;
+				margin: 0 toem(34) 0 0;
 				display: flex;
 				align-items: flex-start;
 				justify-content: flex-start;
@@ -749,17 +761,18 @@ body {
 		}
 	}
 }
+
 .conditions {
+	padding: toem(130) 0 toem(146);
 	h2 {
-		$f: 60px;
-		padding: toem(132,$f) 0 0 0;
+		color: #000;
 	}
-	padding: 0 0 toem(140) 0;
 	&__text {
 		$f:20px;
 		font-size: $f;
 		font-weight: 400;
-		margin: toem(28) 0 0 0;
+		margin: toem(22) 0 0 0;
+		padding: 0 toem(24,$f);
 		color: #000;
 	}
 	&__wrap {
@@ -770,12 +783,13 @@ body {
 		align-items: flex-start;
 		justify-content: flex-start;
 		flex-wrap: wrap;
-		margin: toem(86) 0 0 0;
-		padding: 0 0 toem(76) 0;
+		margin: toem(88) 0 0 0;
+		padding: 0 toem(24,$f) toem(76) toem(24,$f);
 		&__left {
 			width: 50%;
-			max-width: 440px;
-			margin: 0 toem(74) 0 0;
+			max-width: toem(460);
+			margin: 0 toem(66) 0 0;
+			padding: 0 toem(24,$f);
 		}
 		&__right {
 			display: flex;
@@ -785,14 +799,15 @@ body {
 			&--title {
 				font-size: $f;
 				font-weight: 700;
-				margin: 0 0 toem(24) 0;
+				margin: 0 0 toem(22) 0;
+				padding: 0 toem(2);
 			}
 			&__item {
 				width: 100%;
 				display: flex;
 				align-items: center;
 				justify-content: flex-start;
-				margin: 0 0 toem(28) 0;
+				margin: 0 0 toem(26) 0;
 				flex-direction: row;
 				&--image {
 					max-width: toem(70);
@@ -808,9 +823,13 @@ body {
 			}
 		}
 	}
+	.consult {
+		margin: 0 0 0 toem(24);
+	}
 }
+
 .privilege {
-	padding: 0 0 toem(370) 0;
+	padding: toem(86) 0 toem(384) 0;
 	&:before{
 		content: '';
 		width: 100%;
@@ -833,8 +852,6 @@ body {
 		top: 0;
 	}
 	h2 {
-		$f: 60px;
-		padding: toem(90,$f) 0 0 0;
 		color: #fff;
 	}
 	&__text {
@@ -842,7 +859,9 @@ body {
 		font-size: $f;
 		font-weight: 400;
 		color: #fff;
-		margin: toem(18) 0 0 0;
+		padding: 0 toem(24,$f);
+		margin: toem(11) 0 0 0;
+		line-height: toem(36, $f);
 	}
 	&__wrap {
 		$f: 20px;
@@ -851,13 +870,14 @@ body {
 		align-items: flex-start;
 		justify-content: flex-start;
 		flex-wrap: wrap;
-		margin: toem(110) 0 0 0;
+		margin: toem(90) 0 0 0;
 		&__item {
 			width: 50%;
 			display: flex;
 			align-items: center;
 			justify-content: flex-start;
 			margin: 0 0 toem(24) 0;
+			padding: 0 0 0 toem(24);
 			&__image {
 				width: 100%;
 				max-width: 170px;
@@ -887,32 +907,119 @@ body {
 		}
 	}
 }
+
 .reviews {
-	padding: 0 0 toem(170) 0;
+	padding: toem(167) 0 0 0;
 	background: #2b334b;
-	&__line__one {
+	&__line__two {
 		position: absolute;
-		left: 82%;
-		bottom: 0;
-		height: 120%;
+		right: 0;
+		bottom: 28%;
+		height: 100%;
 		transform: rotateZ(-32deg);
-		transform-origin: bottom;
+		transform-origin: bottom right;
 		&--inner {
+			content: '';
 			width: auto;
-			height: 100%;
+			height: 200%;
 			position: absolute;
 			left: 0;
 			top: 0;
 			border-right: 2px solid;
-			border-image: linear-gradient(to top,  #7e888c, #1a2638) 1 100%;
+			border-image: linear-gradient(to top,rgba(126, 136, 140, 1), rgba(126, 136, 140, 0.1)) 1 200%;
 		}
 	}
 	h2 {
-		$f: 60px;
-		padding: toem(29) 0 0 0;
 		color: #fff;
 		span {
 			color: #fff;
+		}
+	}
+	.reviews__video {
+		padding: 0 0 0 toem(14);
+		&:after {
+			content: '';
+			clear: both;
+			display: table;
+		}
+		margin: toem(80) 0 0 0;
+		&__item {
+			$f: 20px;
+			max-width: toem(400);
+			width: 33.333%;
+			float: left;
+			padding: 0 toem(12, $f);
+			margin: 0 0 toem(30, $f) 0;
+			font-size: $f;
+			color: #fff;
+			font-weight: 400;
+			line-height: toem(26,$f);
+			&--name {
+			}
+			&--city {
+			}
+			&--content {
+				&:after {
+					content: '';
+					width: toem(80, $f);
+					height: toem(54, $f);
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform-origin: top left;
+					transform: translate(-50%,-50%);
+					background: transparent url(images/youtube-play.png) no-repeat center center;
+					background-size: cover;
+					cursor: pointer;
+					z-index: 1;
+					transition: 0.3s;
+				}
+				&:hover{
+					&:after {
+						transform: scale(0.9) translate(-50%,-50%);
+					}
+				}
+				position: relative;
+				height: toem(260, $f);
+				margin: toem(14) 0 0 0;
+				display: block;
+			}
+			&--description {
+				margin: toem(12) 0 0 0;
+				line-height: toem(30,$f);
+			}
+			&--time {
+				font-size: toem(16,$f);
+				font-weight: 500;
+				color: #6b7181;
+				margin: toem(4) 0 0 0;
+			}
+		}
+	}
+	.show-more {
+		$f: 20px;
+		font-size: $f;
+		font-weight: 500;
+		padding: toem(18) 0;
+		border: none;
+		border-top: toem(1) solid #555c6f;
+		color: #6b7181;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		line-height: toem(16, $f);
+		z-index: 2;
+		position: relative;
+		text-decoration: none;
+		&--arrow {
+			margin: 0 0 0 toem(32, $f);
+			max-width: toem(30,$f);
+			max-height: toem(12,$f);
+			fill: none;
+			stroke: #555c6f;
+			stroke-linecap: round;
+			stroke-width: 3px;
+			fill-rule: evenodd;
 		}
 	}
 }

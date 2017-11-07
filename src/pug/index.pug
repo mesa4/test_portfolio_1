@@ -97,13 +97,13 @@ html(lang='en')
 				.notation__text
 					span База вакансий ежедневно растет
 
-				.employees
-					.employees__junior
-						img(src="images/employee_3.png" alt="")
-					.employees__man
-						img(src="images/employee_2.png" alt="")
-					.employees__woman
-						img(src="images/employee_1.png" alt="")
+			.employees
+				.employees__junior
+					img(src="images/employee_3.png" alt="")
+				.employees__man
+					img(src="images/employee_2.png" alt="")
+				.employees__woman
+					img(src="images/employee_1.png" alt="")
 		// Section advantages
 		.section.advantages
 			.advantages__line__one
@@ -169,7 +169,7 @@ html(lang='en')
 						.conditions__wrap__right__item
 							.conditions__wrap__right__item--image
 								img(src="images/conditions-arrow.png" alt="")
-							.conditions__wrap__right__item--text Полная юридическая поддержк <br>а в оформлении легализации
+							.conditions__wrap__right__item--text Полная юридическая поддержка <br> в оформлении легализации
 
 				.consult
 					a(href="#").consult--left
@@ -231,12 +231,37 @@ html(lang='en')
 
 		// Section reviews
 		.section.reviews
+			.reviews__line__two
+				.reviews__line__two--inner
 			.wrapper
-				h2 Мы отправляем  <br>
-					span только к проверенным <br> работодателям
+				h2 Видео-отзывы  <br>
+					span наших клиентов
+				.reviews__video
 
+					.reviews__video__item
+						.reviews__video__item--name Андрей
+						.reviews__video__item--city Кировоград
+						a(href="#" style="background: transparent url(https://img.youtube.com/vi/4KRcFYLHTsU/mqdefault.jpg) no-repeat center center; background-size: cover;").reviews__video__item--content
+						.reviews__video__item--description Бывалым ещё себя назвать не могу, но отзыв оставлю)) Воспользовался услугами фирмы Euro Work и уехал на работу в Польшу, сейчас работ...
+						.reviews__video__item--time 10 октября 2017
 
+					.reviews__video__item
+						.reviews__video__item--name Тамара
+						.reviews__video__item--city Киев
+						a(href="#" style="background: transparent url(https://img.youtube.com/vi/4KRcFYLHTsU/mqdefault.jpg) no-repeat center center; background-size: cover;").reviews__video__item--content
+						.reviews__video__item--description Хочу поблагодарит Euro Work за предоставленную возможность работать за границей. Хочется пожелать побольше хороших...
+						.reviews__video__item--time 12 октября 2017
 
+					.reviews__video__item
+						.reviews__video__item--name Жека
+						.reviews__video__item--city Одесса
+						a(href="#" style="background: transparent url(https://img.youtube.com/vi/4KRcFYLHTsU/mqdefault.jpg) no-repeat center center; background-size: cover;").reviews__video__item--content
+						.reviews__video__item--description Привет всем!!!Меня зовут Виталий!В первую очередь хочу поблагодарить фирму Euro Work в лице Юрия и Виталия Гульцов...
+						.reviews__video__item--time 01 ноября 2017
+			a(href="#").show-more
+				span Показать ещё
+				.show-more--arrow.svg
+					svg: use(xlink:href="images/sprite.svg#show-more-arrow")
 
 
 		script(src='js/jquery-3.2.1.min.js', type='text/javascript')
