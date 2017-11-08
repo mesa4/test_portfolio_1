@@ -263,7 +263,51 @@ html(lang='en')
 				.show-more--arrow.svg
 					svg: use(xlink:href="images/sprite.svg#show-more-arrow")
 
+		// Section questions
+		.section.questions
+			.wrapper
+				h2 Частые <br>
+					span вопросы
+
+				.questions__wrap
+					ul.questions__wrap__link
+						li Что нужно для выезда в Израиль?
+						li Слышал, что на таможне могут <br> не пропустить. Это правда?
+						li Почему мне лучше лететь <br> через агентство?
+						li Что делать, если я не знаю иврит <br> и английского?
+						li Я могу работать в Израиле <br> только 3 месяца?
+						li Что делать, если работа меня не устраивает?
+						li.js-active Остались вопросы?
+
+					ul.questions__wrap__content
+						li очему мне лучше лететьчерез агент очему мне лучше лететьчерез агенточему мне лучше лететьчерез агент очему мне лучше лететьчерез агент
+						li Что нужно для выезда в Израиль? для выезда в Израиль? для выезда в Израиль? для выезда в Израиль? для выезда в Израиль?
+						li Что нужно для выезда в Израиль? для выезда в Израиль? для выезда в Израиль? для выезда в Израиль? для выезда в Израиль?
+						li очему мне лучше лететьчерез агент очему мне лучше лететьчерез агенточему мне лучше лететьчерез агент очему мне лучше лететьчерез агент
+						li Что нужно для выезда в Израиль? для выезда в Израиль? для выезда в Израиль? для выезда в Израиль? для выезда в Израиль?
+						li Что нужно для выезда в Израиль? для выезда в Израиль? для выезда в Израиль? для выезда в Израиль? для выезда в Израиль?
+						li.js-active
+							form(method="post" action="").form
+								.form__title Оставьте номер, <br> мы перезвоним
+								.form__title--small в течении трех часов
+								textarea(placeholder="Напишите свой вопрос").form--textarea
+								input(type="tel").form--phone
+								button(type="submit").form--submit жду звонка
+
+		.section.contacts
+			// Google map Api KEY AIzaSyCi_9ZmK1DOFY42RMa_wEySlg_miQ-S4Mw
+			.contacts__map
+			.contacts__triangle-left
+			.wrapper
+				address Наш офис в г. Ровно <br>
+					span ул. Сакспганского 25
+				p.contacts__text Если вам не удобно к нам добираться, <br> все вопросы можно решить <br> дистанционно
+
+
 
 		script(src='js/jquery-3.2.1.min.js', type='text/javascript')
 		script(src='js/svg4everybody.js', type='text/javascript')
+		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCi_9ZmK1DOFY42RMa_wEySlg_miQ-S4Mw&callback=initMap" async defer)
 		script(src='js/script.js', type='text/javascript')
+
+

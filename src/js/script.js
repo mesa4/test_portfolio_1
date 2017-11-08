@@ -11,7 +11,6 @@ $(document).ready(function() {
 	});
 
 	(function() {
-
 		function prof( element ) {
 			$('.professions__salary').css('opacity', '0');
 			$('#professions-list li span.active').removeClass('active');
@@ -26,24 +25,6 @@ $(document).ready(function() {
 			prof( $(this) );
 		});
 	})();
-
-
-	// $('body').on('click',function(e) {
-	// 	if ($(this).has(e.target) == $('.consult')){
-	// 		$('.consult').find('.consult--send-cv').slideToggle(100);
-	// 	} else if ($(this).has(e.target) !== $('.consult')){
-	// 		$('.consult').find('.consult--send-cv').slideToggle(100);
-	// 	}
-	// });
-
-	// $('.consult').on('click',function(e) {
-	// 	e.preventDefault();
-	// 	var rightBtn = $(this).find('.consult--right');
-	// 	if (rightBtn.has(e.target) != 0) {
-	// 		console.log('tyt');
-	// 	}
-	// });
-
 
 	function addBodyEventCloseSlide( element, close_fn ) {
 		var element_class = element.attr('class');
@@ -80,5 +61,27 @@ $(document).ready(function() {
 
 	});
 
+	$('.questions__wrap__link li').on('click', function(){
+		var curIndex = $(this).index();
+		var tabContent = $('.questions__wrap__content li').eq(curIndex);
+
+		$('.questions__wrap__link li.js-active').removeClass('js-active');
+		$(this).addClass('js-active');
+
+		$('.questions__wrap__content li.js-active').removeClass('js-active').css('display','none');
+		tabContent.addClass('js-active').css('display','flex');
+	});
+
+	function initMap() {
+		var uluru = {lat: -25.363, lng: 131.044};
+		var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 4,
+			center: uluru
+		});
+		var marker = new google.maps.Marker({
+			position: uluru,
+			map: map
+		});
+	}
 
 });
