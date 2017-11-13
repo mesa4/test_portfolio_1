@@ -1179,14 +1179,33 @@ body {
 	}
 }
 .contacts {
-	padding: toem(94) 0 toem(600) 0;
-	&__triangle {
-		&-left {
+	//padding: toem(94) 0 toem(600) 0;
+	.wrapper {
+		position: absolute;
+		top: toem(94);
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	&__map {
+		height: toem(924);
+		width: 100%;
+		position: relative;
+		top: 0;
+		left: 0;
+		#map {
 			width: 100%;
 			height: 100%;
+		}
+	}
+	&__triangle {
+		pointer-events: none;
+		&-left {
+			pointer-events: none;
+			width: 100%;
+			height: 80%;
 			position: absolute;
 			top: 0;
-			right: 0;
+			left: 0;
 			overflow: hidden;
 			&:before {
 				content: '';
@@ -1194,7 +1213,7 @@ body {
 				height: 100%;
 				background: #d62f27;
 				position: absolute;
-				transform-origin: top right;
+				transform-origin: top left;
 				transform: skewX(-70.4deg);
 				top: 0;
 				right: 0;
@@ -1209,6 +1228,7 @@ body {
 		padding: 0 toem(22,$f);
 		color: #fff;
 		margin: 0 0 toem(8) 0;
+		cursor: pointer;
 		span {
 			font-size: $f;
 			font-weight: 900;
@@ -1224,7 +1244,16 @@ body {
 		padding: 0 toem(22,$f);
 	}
 }
+.footer {
+	&__content {
+		&__left {
 
+		}
+		&__middle {
+
+		}
+	}
+}
 
 //@media (min-width: 1200px) {
 //	body {

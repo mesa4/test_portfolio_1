@@ -297,17 +297,28 @@ html(lang='en')
 		.section.contacts
 			// Google map Api KEY AIzaSyCi_9ZmK1DOFY42RMa_wEySlg_miQ-S4Mw
 			.contacts__map
-			.contacts__triangle-left
+				#map
+				.contacts__triangle-left
+				.wrapper
+					address#address Наш офис в г. Ровно <br>
+						span ул. Сакспганского 25
+					p.contacts__text Если вам не удобно к нам добираться, <br> все вопросы можно решить <br> дистанционно
+
+		// Footer
+		footer.footer
 			.wrapper
-				address Наш офис в г. Ровно <br>
-					span ул. Сакспганского 25
-				p.contacts__text Если вам не удобно к нам добираться, <br> все вопросы можно решить <br> дистанционно
+				.footer__content
+					.footer__left
+					.footer__middle
+					.footer__right
+
 
 
 
 		script(src='js/jquery-3.2.1.min.js', type='text/javascript')
 		script(src='js/svg4everybody.js', type='text/javascript')
-		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCi_9ZmK1DOFY42RMa_wEySlg_miQ-S4Mw&callback=initMap" async defer)
+		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCi_9ZmK1DOFY42RMa_wEySlg_miQ-S4Mw" async defer)
 		script(src='js/script.js', type='text/javascript')
+
 
 
